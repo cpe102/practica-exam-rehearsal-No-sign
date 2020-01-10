@@ -1,11 +1,38 @@
 #include <iostream>
+#include <string>
+using namespace std;
 
-//Write compress() here.
+int i,n,x;
+string k="";
+
+string conpress(string cha)
+{
+	i=0;
+	n=0;
+	x=0;
+	string re=cha;
+	
+	while(i<cha.size())
+	{
+	  
+		re[n]=cha[i];
+	
+	
+		i=i+3;
+		n++;
+	}
+	while(x+n<cha.size()){
+	
+		re[cha.size()-(x+1)]=k[0];
+		x++;
+	}
+	return re;
+}
 
 int main()
 {
-    string a = conpress("ABCDEFGHIJKLMN");
-    string b = conpress("123456");
+    string a = conpress("cpecmu");
+    string b = conpress("x");
     string c = conpress("HelloWorld");
     string d = conpress("BNK48");
     string e = conpress("COMPROG261102");
